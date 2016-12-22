@@ -9,7 +9,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 /**
  * Application Configuration DEV Environment
  */
-const appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
+const appconfig = JSON.parse(fs.readFileSync('./config/demo.config.json'));
 const environment_config = appconfig.environment_constants['dev']['EnvironmentConfig'];
 /**
  * Webpack Plugins

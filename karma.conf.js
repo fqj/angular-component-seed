@@ -4,8 +4,8 @@ const argv = require('yargs').argv;
 const fs = require('fs');
 
 module.exports = function(config) {
-  var testWebpackConfig = require('./config/webpack.test.js')({env: 'test'});  
-  var appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
+  var testWebpackConfig = require('./config/webpack.test.js')({env: 'test'});
+  var appconfig = JSON.parse(fs.readFileSync('./config/demo.config.json'));
   var environment = (argv.dev) ? 'dev' : 'pro';
   var threshold = appconfig.coverage_threshold[environment];
   var configuration = {
