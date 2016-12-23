@@ -1,2 +1,15 @@
-<h1>hola</h1>
-<router-outlet></router-outlet>
+<header class="shell">
+
+</header>
+<section class="main">
+  <aside class="main__sidebar">
+    <h1>{{ componentName }}</h1>
+    <nav class="main__nav">
+      <a [routerLink]="['/demo']" class="main__link">Demo</a>
+      <a [routerLink]="['/docs']" class="main__link">Docs</a>
+    </nav>
+  </aside>
+  <section class="main__iframe" >
+    <router-outlet></router-outlet>
+  </section>
+</section>

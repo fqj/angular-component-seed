@@ -1,6 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
-import { TranslateService } from 'ng2-translate';
+import {Component, ViewEncapsulation, Renderer} from '@angular/core';
 
 /*
  * App Component
@@ -10,8 +8,18 @@ import { TranslateService } from 'ng2-translate';
   selector: 'app-shell',
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['shell.component.scss'],
-  templateUrl: 'shell.component.html',
+  templateUrl: 'shell.component.html'
 })
 
 export class ShellComponent {
-}
+  private page: String;
+  private componentName: String;
+
+  constructor(private renderer: Renderer){}
+
+  ngOnInit() {
+    this.componentName = 'myFilterComponent'
+    this.page = 'demo';
+  }
+
+  }

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
 
 @Component({
   selector: 'stn-filter',
@@ -8,9 +8,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 
 export class FilterComponent {
-
-  constructor() {}
+  @Input() greeting:string;
 
   ngOnInit() {
+  }
+
+  publicFunction(name) {
+    console.log("hello world");
   }
 }
