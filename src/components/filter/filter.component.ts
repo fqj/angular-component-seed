@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'stn-filter',
@@ -6,14 +6,14 @@ import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
   styleUrls: ['filter.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-
 export class FilterComponent {
-  @Input() greeting:string;
 
-  ngOnInit() {
+  @Input() name:string;
+
+  constructor() {}
+
+  getConcatenatedName():string {
+    return `My name is ${this.name} and you know it!`
   }
 
-  publicFunction(name) {
-    console.log("hello world");
-  }
 }

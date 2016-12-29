@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DemoComponent } from './demo.component';
 import { ShellComponent } from './shell';
-import {FilterComponent} from "../../component";
+import {FilterComponent} from '../components/filter/filter.component';
 import {DemoSnippetComponent} from "./demo-snippet/demo-snippet.component";
 import {RouterModule, Routes} from "@angular/router";
 import {DocIframeComponent} from "./doc-iframe/doc-iframe.component";

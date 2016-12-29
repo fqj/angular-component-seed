@@ -1,10 +1,13 @@
-/**
- * @author: @AngularClass
- */
+'use strict';
+
+const argv = require('yargs').argv;
+const fs = require('fs');
 
 module.exports = function(config) {
   var testWebpackConfig = require('./webpack.test.js')({env: 'test'});
-
+  var appconfig = JSON.parse(fs.readFileSync('./config/app.config.json'));
+  var environment = (argv.dev) ? 'dev' : 'pro';
+  var threshold = appconfig.coverage_threshold[environment];
   var configuration = {
 
     // base path that will be used to resolve all patterns (e.g. files, exclude)
@@ -15,7 +18,7 @@ module.exports = function(config) {
      *
      * available frameworks: https://npmjs.org/browse/keyword/karma-adapter
      */
-    frameworks: ['jasmine'],
+    frameworks: ['phantomjs-shim','jasmine'],
 
     // list of files to exclude
     exclude: [ ],
@@ -37,14 +40,26 @@ module.exports = function(config) {
     webpack: testWebpackConfig,
 
     coverageReporter: {
-      type: 'in-memory'
+      type: 'in-memory',
+      check: {
+        global: {
+          statements: threshold.statements,
+          branches: threshold.branches,
+          functions: threshold.functions,
+          lines: threshold.lines,
+          excludes: []
+        }
+      }
     },
 
     remapCoverageReporter: {
       'text-summary': null,
-      json: './coverage/coverage.json',
-      html: './coverage/html'
+      json: './test-reports/coverage.json',
+      html: './test-reports/html',
+      cobertura: './test-reports/cobertura.xml'
     },
+
+
 
     // Webpack please don't spam the console when running in karma!
     webpackMiddleware: { stats: 'errors-only'},
@@ -76,9 +91,7 @@ module.exports = function(config) {
      * start these browsers
      * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
      */
-    browsers: [
-      'Chrome'
-    ],
+    browsers: ['PhantomJS'],
 
     customLaunchers: {
       ChromeTravisCi: {

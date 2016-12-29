@@ -1,1 +1,1 @@
-export * from './component';
+export * from './src/components/filter';

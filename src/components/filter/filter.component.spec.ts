@@ -7,6 +7,7 @@ import {
 import {FilterComponent} from "./filter.component";
 
 describe('Filter Component', () => {
+
   // provide our implementations or mock-data to the dependency injector
   beforeEach(() => TestBed.configureTestingModule(
     {
@@ -14,8 +15,11 @@ describe('Filter Component', () => {
     }
   ));
 
-  it('should work!', inject([ FilterComponent ], (myEl: FilterComponent) => {
-    expect(myEl.url).toEqual('https://twitter.com/AngularClass');
+  it('verify name', inject([ FilterComponent ], (myEl: FilterComponent) => {
+
+    myEl.name = 'Julio Iglesias'
+    expect(myEl.getConcatenatedName()).toBe('My name is Julio Iglesias and you know it!');
+
   }));
 
 });
