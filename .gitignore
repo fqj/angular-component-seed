@@ -70,3 +70,5 @@ npm-debug.log
 
 # Test Report #
 /test-reports
+
+src/assets/docs/**
