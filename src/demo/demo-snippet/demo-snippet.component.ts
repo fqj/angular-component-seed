@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'demo-snippet',
@@ -11,10 +11,11 @@ import {Component, ViewChild} from '@angular/core';
   styleUrls: [ './demo-snippet.component.css']
 })
 
-export class DemoSnippetComponent {
+export class DemoSnippetComponent implements AfterViewInit {
   @ViewChild('demo') content:any;
 
   ngAfterViewInit() {
-    this.content.nativeElement.children[1].append(this.content.nativeElement.children[0].outerHTML);
+    const reflectContent = this.content.nativeElement.children[0].outerHTML.replace('ng-reflect-', '');
+    this.content.nativeElement.children[1].append(reflectContent);
   }
 }
