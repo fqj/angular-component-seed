@@ -13,14 +13,14 @@ import {Component, ViewEncapsulation, Renderer} from '@angular/core';
 
 export class ShellComponent {
 
-  private page: String;
-  private componentName: String;
+    private page: String;
+    private componentName: String;
 
-  constructor(private renderer: Renderer){}
+    constructor(private renderer: Renderer){}
 
-  ngOnInit() {
-    this.componentName = 'FilterComponent'
-    this.page = 'demo';
-  }
+    ngOnInit() {
+      this.componentName = 'FilterComponent';
+      this.page = 'demo';
+    }
 
   }

@@ -1,9 +1,20 @@
 import { Routes } from '@angular/router';
-import {FilterComponent} from "../components/filter/filter.component";
+import { DemoComponent } from './demo.component';
+import { DocIframeComponent } from "./doc-iframe/doc-iframe.component";
 
 export const ROUTES: Routes = [
   {
+    path: 'demo',
+    component: DemoComponent
+  },
+  {
+    path: 'docs',
+    component: DocIframeComponent
+  },
+  {
     path: '',
-    component: FilterComponent
+    redirectTo: 'demo',
+    pathMatch: 'full'
   }
 ];
+
