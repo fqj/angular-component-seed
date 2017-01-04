@@ -8,6 +8,7 @@ import { ShellComponent } from './shell';
 import { DemoSnippetComponent } from "./demo-snippet/demo-snippet.component";
 import { FilterComponent } from '../components/filter/filter.component';
 import { DocIframeComponent } from "./doc-iframe/doc-iframe.component";
+import { TestsIframeComponent } from "./tests-iframe/tests-iframe.component";
 
 /** `AppModule` is the main entry point into Angular2's bootstraping process */
 @NgModule({
@@ -17,6 +18,7 @@ import { DocIframeComponent } from "./doc-iframe/doc-iframe.component";
     FilterComponent,
     DemoSnippetComponent,
     DocIframeComponent,
+    TestsIframeComponent,
     DemoComponent
   ],
   /** import Angular's modules and specify the lazyLoad modules preload strategy */
