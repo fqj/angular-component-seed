@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from "@angular/router";
+import {RouterModule, Routes, Router, NavigationEnd} from "@angular/router";
 import { BrowserModule } from '@angular/platform-browser';
-
 import { ROUTES } from './app.routes';
 
 import { DemoComponent } from './demo.component';
@@ -28,4 +27,11 @@ import { DocIframeComponent } from "./doc-iframe/doc-iframe.component";
 })
 
 export class AppModule {
+  constructor(private router: Router) {
+     router.events.subscribe((navigationEvent) => {
+      if (navigationEvent instanceof NavigationEnd && navigationEvent.url.indexOf('demo') != -1) {
+        window.prettyPrint();
+      }
+    });
+  }
 }
