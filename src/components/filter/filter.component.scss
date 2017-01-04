@@ -1,0 +1,56 @@
+.filter {
+  display: flex;
+  font-size: 14px;
+}
+
+.filter__image {
+  max-height: 22px;
+}
+
+.filter__input {
+  display: flex;
+  flex: 1;
+}
+
+.filter__input__search{
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.filter__button {
+  width: 15%;
+  background: #F0F0F0;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: 0;
+  font-size: 18px;
+
+  .icon {
+    font-size: 26px;
+    display: flex;
+  }
+}
+
+.filter__input__speak{
+  cursor: pointer;
+  border: 0;
+  background: none;
+  border-left: 1px solid #dedede;
+  margin: 5px 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: gray;
+
+  .icon {
+    display: flex;
+  }
+}

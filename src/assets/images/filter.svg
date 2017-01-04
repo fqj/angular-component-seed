@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6 (26304) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle 13 + Path 392</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="CARDS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SAN-UX-OLB-CARDS-01" transform="translate(-893.000000, -639.000000)" fill="#F00700">
+            <g id="Triangle-13-+-Path-392" transform="translate(893.000000, 639.000000)">
+                <path d="M0,0 L19,0 L9.5,9.35022523 L0,0 Z" id="Triangle-13"></path>
+                <path d="M7.30769231,5.41328829 L7.30769231,15.3322631 L11.4663211,17.8978766 L11.4663211,6.49315856 L7.30769231,5.41328829 Z" id="Path-392"></path>
+            </g>
+        </g>
+    </g>
+</svg>

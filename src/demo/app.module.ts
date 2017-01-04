@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes, Router, NavigationEnd} from "@angular/router";
 import { BrowserModule } from '@angular/platform-browser';
 import { ROUTES } from './app.routes';
-
+import { FormsModule }   from '@angular/forms';
 import { DemoComponent } from './demo.component';
 import { ShellComponent } from './shell';
 import { DemoSnippetComponent } from "./demo-snippet/demo-snippet.component";
@@ -24,6 +24,7 @@ import { TestsIframeComponent } from "./tests-iframe/tests-iframe.component";
   /** import Angular's modules and specify the lazyLoad modules preload strategy */
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ]
 })

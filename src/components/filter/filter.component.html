@@ -1,1 +1,17 @@
-<h2>Hey! my name is {{name}}</h2>
+<article class="filter">
+  <div class="filter__input">
+    <input
+            (ngModelChange)="searchTermChanged($event)"
+            [ngModel]="searchTerm"
+            class="filter__input__search"
+            type="text" placeholder="Search"
+            i18n
+    >
+    <button (click)="sendEvent($event, 'phone')" class="filter__input__speak">
+      <img class="filter__image" src="{{speakImg}}" alt="">
+    </button>
+  </div>
+  <button (click)="sendEvent($event, 'filter')" class="filter__button">
+    <img class="filter__image" src="{{filterImg}}" alt="">
+  </button>
+</article>
