@@ -1,8 +1,9 @@
 <header class="shell">
-
+  <h1>{{ componentName }}</h1>
+  <button (click)="toggleMenu()" class="shell__button"><img class="shell__img" src="assets/images/menu.svg"></button>
 </header>
 <section class="main">
-  <aside class="main__sidebar">
+  <aside [ngClass]="{'active': menu}" class="main__sidebar">
     <img class="main__logo" src="/assets/images/frontstack.png">
     <h1>{{ componentName }}</h1>
     <nav class="main__nav">
@@ -11,7 +12,7 @@
       <a [routerLink]="['/reports']" class="main__link"><i class="fa fa-file"></i>Tests Reporting</a>
     </nav>
   </aside>
-  <section class="main__iframe" >
+  <section class="main__section" >
     <router-outlet></router-outlet>
   </section>
 </section>
